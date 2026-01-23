@@ -1,26 +1,12 @@
+## Project Status
 
-# Healing AI Text Game
+This project is currently in early exploration stage.
 
-## 项目简介
-这是一个 AI 驱动的治愈型互动文本体验。
-玩家通过对话和选择，与一个温柔的叙事者互动，
-获得被倾听、被回应的感觉。
+The focus at this phase is:
+- narrative structure
+- interaction rhythm
+- ethical boundaries of AI narration
 
-## 项目动机
-很多时候，人需要的不是答案，而是陪伴。
-这个项目尝试用 AI 构建一种温柔的互动体验。
+Details will be updated as the project evolves.
 
-## 核心功能（规划中）
-- 文本对话互动
-- AI 角色保持治愈风格
-- 简单的对话分支与上下文记忆
-
-## 技术栈
-- Python
-- AI API
-- Streamlit（用于展示页面）
-
-## 当前进度
-- [x] 项目初始化
-- [ ] 基础对话 Demo
-- [ ] 交互页面
+ 
