@@ -1,7 +1,7 @@
 # Witness  
 一个见证型叙事互动原型
 
-> A small interactive narrative prototype exploring a witness-based presence.
+>  An interactive narrative prototype exploring a witness-based mode of presence.
 
 ---
 
@@ -18,18 +18,30 @@
 
 ## 项目动机 | Motivation
 
-在大量情绪类产品与对话式 AI 中，常见的设计倾向包括：
+ 在大量情绪类产品与对话式 AI 中，常见的设计倾向包括：
 
-- 快速安慰与正向引导  
-- 给出建议或行动方案  
-- 尝试“帮助用户走出来”  
+快速安慰与正向引导
 
-但在真实体验中，这类回应有时会带来新的压力：  
-被期待振作、被暗示应该积极，或被过早推向行动。
+给出建议或行动方案
+
+尝试“帮助用户走出来”
+
+但在真实体验中，这类回应有时会带来新的压力：
+
+被期待振作
+
+被暗示应该积极
+
+被过早推向行动
 
 本项目尝试一种更克制的互动立场：
 
-> 不判断、不说教、不替代选择，只见证。
+No judgment.
+No instruction.
+No substitution of choice.
+Only witnessing.
+
+不判断、不说教、不替代选择，只见证。
 
 ---
 
@@ -49,30 +61,73 @@
 ---
 
 ## 当前实现内容 | Current Implementation  
-### 第一幕（Act One）
+### 结构设计 | Narrative Structure
 
-目前项目实现了一个**完整可运行的第一幕体验流程**：
+本项目采用“幕（Act）”作为结构单位，
+每一幕围绕一种不同的心理停顿状态展开。
 
-1. **开屏引导（Opening）**  
-   提供一个低压力的进入场景，强调“不着急”。
+当前结构规划如下：
 
-2. **情绪放置区（Emotion Drop）**  
-   用户可自由输入当前最明显的感受，不要求整理或解释。
+Act One – 被看见（Being Witnessed）
+允许用户放下情绪，不急于改变。
 
-3. **情绪停顿区（Pause）**  
-   暂停推进节奏，允许用户选择是否继续。
+Act Two – 起步之前（Before the First Step）
+探索“无法开始”的心理结构，包括：
 
-4. **直面表达区（Expression）**  
-   邀请用户描述一个近期反复出现的困扰（可模糊、不完整）。
+不知道从何开始（confused）
 
-5. **见证式回应（Witness Response）**  
-   提供克制、不替代判断的文本回应。
+明知道要做却起不来（blocked）
 
-6. **托底结束（Closure）**  
-   明确结束边界，允许用户离开或之后再回来。
+一开始就预见失败（hopeless）
 
-整个流程基于 **状态机（step-based flow）** 实现，  
-强调结构清晰、可扩展、可复用。
+Act Three – （规划中）
+将围绕“继续之后”的体验展开。
+
+每一幕既可独立体验，也构成整体递进的一部分。
+
+
+
+### 当前实现进度 | Current Progress
+Act One – Completed
+
+已实现完整可运行体验流程：
+
+开屏引导（Opening）
+
+情绪放置区（Emotion Drop）
+
+情绪停顿区（Pause）
+
+直面表达区（Expression）
+
+见证式回应（Witness Response）
+
+托底结束（Closure）
+
+流程基于 step-based state machine 实现，
+结构清晰，可扩展。
+
+Act Two – In Progress
+
+目前已完成：
+
+第二幕结构框架
+
+分支逻辑（session_state 驱动）
+
+第一条分支文案（confused）
+
+幕间过渡设计
+
+正在进行：
+
+blocked / hopeless 分支深化
+
+分支收束与结构统一
+
+节奏与语气打磨
+
+ 
 
 ---
 
@@ -81,7 +136,7 @@
 - Python 3.x  
 - Streamlit  
 - Session State 驱动的状态机流程  
-- 模块化的跳转与重置逻辑  
+- 分支结构控制（branch-based narrative flow）
 
 当前版本**未接入大模型 API**，  
 所有文本均为手工设计，用于专注打磨体验与结构。
@@ -108,4 +163,13 @@
 ```bash
 pip install streamlit
 streamlit run app.py
- 
+
+
+ Development Philosophy
+
+This project is being developed slowly and intentionally.
+
+The goal is not speed or feature accumulation,
+but clarity of position and narrative consistency.
+
+Continuity matters more than acceleration.
